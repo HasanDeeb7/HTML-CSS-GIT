@@ -1,4 +1,23 @@
 .countries {
   display: flex;
+  width: 60%; /*sorry for editing above the line :)*/
 }
 /* Add your own CSS code below */
+.countries--first {
+  align-items: center;
+}
+.countries--second {
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.countries--third {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.countries--fourth {
+  flex-direction: column-reverse;
+  justify-content: end;
+  align-items: center;
+}
