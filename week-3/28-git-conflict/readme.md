@@ -17,17 +17,19 @@ git branch
 
 You should see the following printed to the terminal, which tells you that you are currently on the `master` branch:
 
-```
+````
   green_links
 * master
   orange_links
   red_links
-```
+```git
 
 Create a new branch for changing the link colour to `fuchsia`:
 
-```
+````
+
 git checkout -b purple_links
+
 ```
 
 Now edit the `style.css` file and change the colour of the links in your messages to `fuchsia`. Check to see if the links have changed to a purple colour. If they have, then add and commit your changes.
@@ -37,7 +39,9 @@ Before you can show your boss the purple colour, she calls you into her office. 
 Make sure you are on the `master` branch:
 
 ```
+
 git checkout master
+
 ```
 
 > _Hint: Run `git branch` in the terminal to make sure you're on the correct branch._
@@ -51,7 +55,9 @@ In [exercise 15](/week-2/15-git-merge) you merged a branch into `master` using G
 Check out the `master` branch:
 
 ```
+
 git checkout master
+
 ```
 
 > _Hint: Don't forget to run `git branch` in the terminal to make sure you're on the correct branch._
@@ -59,16 +65,20 @@ git checkout master
 Now you can merge the `purple_links` branch into `master` with the following command:
 
 ```
+
 git merge purple_links
+
 ```
 
 When you try to do this, you will get a message telling you that there is a merge conflict.
 
 ```
+
 Auto-merging week-3/20-git-conflict/styles.css
 CONFLICT (content): Merge conflict in week-3/20-git-conflict/styles.css
 Automatic merge failed; fix conflicts and then commit the result.
-```
+
+````
 
 This tells you that there is a merge conflict in the file `week-3/20-git-conflict/styles.css`. If you open the file you will find that lines have been added to the file.
 
@@ -83,7 +93,7 @@ This tells you that there is a merge conflict in the file `week-3/20-git-conflic
 	font-weight: 700;
 	text-decoration: none;
 }
-```
+````
 
 Why did this happen? When git tried to merge the `purple_links` branch into `master` it found two commits: the commit where you changed the links to blue and the commit where you changed the links to purple.
 
